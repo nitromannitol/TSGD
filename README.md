@@ -23,7 +23,7 @@ The scripts were written in 2015 for a Julia release before 1.0 and do not run o
 Julia: they use `tic()` and `int()`, which were removed in Julia 1.0, and the Convex.jl and
 ECOS.jl interfaces of that time. The packages the scripts load are `PyPlot` (matplotlib
 through PyCall), `Distributions`, `Convex` and `ECOS` (most scripts), `Regression`
-(`logistic_MLE.jl`, `test_logisticreg.jl`) and `Optim` (`asian_option.jl`).
+(`logistic_MLE.jl`, `test_logisticreg.jl`) and `Optim` (`test_logisticreg.jl`).
 
 With a pre-1.0 Julia and these packages installed, each script is run on its own from the
 repository directory, for example
@@ -44,10 +44,10 @@ The repository contains only top-level scripts. By file name:
 | `gaussian_*.jl`, `quart_*.jl`, `quartic_*.jl`, `exp_*.jl`, `testgaussianngdnsgd.jl`, `testing_gaussian.jl` | TSGD on `x²/2`, `x⁴` and `eˣ − x`: autocorrelation time, accuracy, stationary distribution (`tsgd_gaussian_hist.jl`) |
 | `noisy_exponential.jl`, `noisy_quartic.jl`, `noisy_rosenbrock.jl` | noisy test problems, with figure numbers in the comments |
 | `asian_*.jl`, `1dasianoption_test.jl`, `comparing_asian_option_gradients.jl`, `newstepsizeAsian.jl`, `tsgd_asia*.jl`, `tsgd_asian_*.jl`, `finance_sample.jl`, `monteCarloFinance.jl` | the Asian-option problem |
-| `logistic_MLE.jl`, `test_logisticreg.jl`, `dirichlet_MLE.jl` | maximum-likelihood problems |
+| `logistic_MLE.jl`, `test_logisticreg.jl` | maximum-likelihood estimation for logistic regression |
 | `volume_polytope.jl`, `volume_quad.jl` | volume computations |
 | `gd_dimstepsize.jl`, `gd_stepsizetest.jl` | gradient descent with diminishing step size compared with truncated gradient descent, and when gradient descent fails |
-| `CLT_verify.jl`, `disc_term.jl`, `linear_dynamic.jl`, `logm.jl`, `NGD_speedtest.jl`, `test.jl`, `test_SDE.jl`, `tgd_twodim.jl`, `TSG_distance_plot.jl`, `ttest.jl`, `two_dimension_test.jl` | smaller experiments, checks and helpers; see the comments at the top of each file |
+| `CLT_verify.jl`, `disc_term.jl`, `linear_dynamic.jl`, `logm.jl`, `NGD_speedtest.jl`, `test.jl`, `test_SDE.jl`, `tgd_twodim.jl`, `TSG_distance_plot.jl`, `ttest.jl`, `two_dimension_test.jl`, `dirichlet_MLE.jl` (which contains only `using Distributions`) | smaller experiments, checks and helpers; see the comments at the top of each file |
 
 ## Authors and citation
 
