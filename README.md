@@ -48,7 +48,3 @@ The repository contains only top-level scripts. By file name:
 | `volume_polytope.jl`, `volume_quad.jl` | volume computations |
 | `gd_dimstepsize.jl`, `gd_stepsizetest.jl` | gradient descent with diminishing step size compared with truncated gradient descent, and when gradient descent fails |
 | `CLT_verify.jl`, `disc_term.jl`, `linear_dynamic.jl`, `logm.jl`, `NGD_speedtest.jl`, `test.jl`, `test_SDE.jl`, `tgd_twodim.jl`, `TSG_distance_plot.jl`, `ttest.jl`, `two_dimension_test.jl`, `dirichlet_MLE.jl` (which contains only `using Distributions`) | smaller experiments, checks and helpers; see the comments at the top of each file |
-
-## Authors and citation
-
-The code is by **Ahmed Bou-Rabee**.
