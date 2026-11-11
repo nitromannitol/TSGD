@@ -14,18 +14,16 @@ x ← x − α / (1 + α‖g‖) · g
 maximum-likelihood problem, on an Asian-option problem with an importance distribution
 obtained by shifting a standard normal by `θ`, and on volume computations; they compare it
 with gradient descent with diminishing step sizes, and estimate the autocorrelation time and
-the stationary distribution of the iterates. Some scripts name figure numbers of a paper
-(for example [`noisy_rosenbrock.jl`](noisy_rosenbrock.jl), "Figure 1"); that paper is neither
-named nor included in this repository.
+the stationary distribution of the iterates. Some scripts refer to figure numbers in
+their comments (for example [`noisy_rosenbrock.jl`](noisy_rosenbrock.jl), "Figure 1").
 
 ## Running
 
 The scripts were written in 2015 for a Julia release before 1.0 and do not run on current
 Julia: they use `tic()` and `int()`, which were removed in Julia 1.0, and the Convex.jl and
-ECOS.jl interfaces of that time. There is no `Project.toml`. The packages the scripts load
-are `PyPlot` (matplotlib through PyCall), `Distributions`, `Convex` and `ECOS` (most
-scripts), `Regression` (`logistic_MLE.jl`, `test_logisticreg.jl`) and `Optim`
-(`asian_option.jl`).
+ECOS.jl interfaces of that time. The packages the scripts load are `PyPlot` (matplotlib
+through PyCall), `Distributions`, `Convex` and `ECOS` (most scripts), `Regression`
+(`logistic_MLE.jl`, `test_logisticreg.jl`) and `Optim` (`asian_option.jl`).
 
 With a pre-1.0 Julia and these packages installed, each script is run on its own from the
 repository directory, for example
@@ -34,8 +32,8 @@ repository directory, for example
 include("tsgd_gaussian_hist.jl")
 ```
 
-The scripts are independent of each other. Several read or write data and figure files under
-directories (`data/`, `paper/figures/`) that are not part of this repository.
+The scripts are independent of each other. Several read data files from, or write figures to,
+the directories `data/` and `paper/figures/`.
 
 ## Repository layout
 
@@ -53,8 +51,7 @@ The repository contains only top-level scripts. By file name:
 
 ## Authors and citation
 
-The code is by **Ahmed Bou-Rabee**. The repository does not name an associated paper, so it
-has no `CITATION.cff`.
+The code is by **Ahmed Bou-Rabee**.
 
 ## License
 
